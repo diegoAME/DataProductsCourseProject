@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+Waves webApp
+========================================================
+author: Diego Martinez
+date: January 7 2021
+autosize: true
 
-You can use the [editor on GitHub](https://github.com/diegoAME/DataProductsCourseProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+DESCRIPTION
+========================================================
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The present webApp shows a graphic representation for a sine continuous signal.
+The user can specify the desired frecuency form a range between 1 and 50, a constant amplitude of 1 and phase 0, from an interval of time between 0 and .1 seconds.
 
-### Markdown
+HOW TO USE
+========================================================
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The webApp provides a slider (left side of the page) for numeric values which determine the desired frecuency to be shown.
 
-```markdown
-Syntax highlighted code block
+Once the user has selected a numeric position from the slider, the app takes that value as an input value for the app, and then, on the right side of the app the graphic form of the signal is shown.
 
-# Header 1
-## Header 2
-### Header 3
+THEORY BEHIND THE APP
+========================================================
 
-- Bulleted
-- List
+A sine signal, in its continuous form, is a function which states the amplitude of a sine behaviour-like pattern across time.
 
-1. Numbered
-2. List
+The main parameters form a sinusiodal sign are:
 
-**Bold** and _Italic_ and `Code` text
+- Amplitude
+- Angular frecuency
+- phase
 
-[Link](url) and ![Image](src)
+Knowing this, the mathematical model for a sinusoidal signal is:
+
+Amplitude * sin( Angular Frecuency* time +  phase )
+
+CODE EXAMPLE  
+========================================================
+
+As a quick example, a sin wave with with a frecuency of 50 Hz is shown on an interval of 0 to 0.1 seconds :
+
+```{r}
+t=seq(0,.1,0.001)
+f <- 50
+y=sin(2*pi*f*t)
+plot(t,y,type="l",lwd=2, xlab="time", ylab="Amp",col="blue")
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/diegoAME/DataProductsCourseProject/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
