@@ -1,0 +1,47 @@
+Waves webApp
+========================================================
+author: Diego Martinez
+date: January 7 2021
+autosize: true
+
+DESCRIPTION
+========================================================
+
+The present webApp shows a graphic representation for a sine continuous signal.
+The user can specify the desired frecuency form a range between 1 and 50, a constant amplitude of 1 and phase 0, from an interval of time between 0 and .1 seconds.
+
+HOW TO USE
+========================================================
+
+The webApp provides a slider (left side of the page) for numeric values which determine the desired frecuency to be shown.
+
+Once the user has selected a numeric position from the slider, the app takes that value as an input value for the app, and then, on the right side of the app the graphic form of the signal is shown.
+
+THEORY BEHIND THE APP
+========================================================
+
+A sine signal, in its continuous form, is a function which states the amplitude of a sine behaviour-like pattern across time.
+
+The main parameters form a sinusiodal sign are:
+
+- Amplitude
+- Angular frecuency
+- phase
+
+Knowing this, the mathematical model for a sinusoidal signal is:
+
+Amplitude * sin( Angular Frecuency* time +  phase )
+
+CODE EXAMPLE  
+========================================================
+
+As a quick example, a sin wave with with a frecuency of 50 Hz is shown on an interval of 0 to 0.1 seconds :
+
+```{r}
+t=seq(0,.1,0.001)
+f <- 50
+y=sin(2*pi*f*t)
+plot(t,y,type="l",lwd=2, xlab="time", ylab="Amp",col="blue")
+```
+
+
