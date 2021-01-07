@@ -37,11 +37,14 @@ CODE EXAMPLE
 
 As a quick example, a sin wave with with a frecuency of 50 Hz is shown on an interval of 0 to 0.1 seconds :
 
-```{r}
+
+```r
 t=seq(0,.1,0.001)
 f <- 50
 y=sin(2*pi*f*t)
 plot(t,y,type="l",lwd=2, xlab="time", ylab="Amp",col="blue")
 ```
+
+![plot of chunk unnamed-chunk-1](pitch-figure/unnamed-chunk-1-1.png)
 
 
